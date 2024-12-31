@@ -1,6 +1,28 @@
 import subprocess
 import os
 
+urls = [
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZSHfomCtXWV_hp0AZo_d_fa",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZTd2rKxXdy-_I0JDHlwdy6j",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQEBlbUr3GePc_aRK1US_Df",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQtQnllF2ecgXpCPd33QfF2",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQmeMz0CnyUaeO_P4v4bq1W",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZTOIcqpWp_s4uXa3X_Co8ko",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQFCBYrF01ZXjWgBFhTgalQ",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZTyjR7IsAsSyHEOp0KxOOIh",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZSL5LgA0BHNobNODJiiz1nk",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQvwdyM080FxE2xmWeoTKY_",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZSivBpJnQtnCeLpD3T8OqT1",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZRvGqHusQcmB3tIOv1rD10_",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQwhjc0XwnziWpYsNmN5TXn",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQRfRFyd9wHJay7F3qu-F7S",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZQoUqkMT8P2eV6JP90GDGpt",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZS-_OSf5O32yfuJJ_rfvdmC",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZSDI508JYcq2fTxiEDvfiwc",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZT4pNemi-7M5xFRfkuw3z-Z",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZSwJbzAIRSDN_2IKInKEaUe",
+    "https://www.youtube.com/playlist?list=PLjkaUn6QNTZRFNiu0a8z3QmioVuZhWob2"
+]
 
 def download_video_and_captions(playlist_url, output_dir="downloads"):
     # Ensure the output directory exists
@@ -41,9 +63,6 @@ def extract_captions(output_dir):
                 print(f"Extracted caption file: {file_path}")
                 # You can save these files elsewhere or manipulate them if needed
 
-
-# URL of the playlist you want to download
-playlist_url = "https://www.youtube.com/playlist?list=PLjkaUn6QNTZSwJbzAIRSDN_2IKInKEaUe"
-
-# Call the function to download the playlist and scrape captions
-download_video_and_captions(playlist_url)
+# Loop over each URL in the list and download the videos and captions
+for playlist_url in urls:
+    download_video_and_captions(playlist_url)
